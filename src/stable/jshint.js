@@ -1179,7 +1179,7 @@ var JSHINT = (function () {
 				nobreaknonadjacent(state.tokens.prev, state.tokens.curr);
 				nonadjacent(state.tokens.curr, state.tokens.next);
 			}
-			if (s === "in" && left.id === "!") {
+			if (s === "in" && left !== undefined && left.id === "!") {
 				warning("W018", left, "!");
 			}
 			if (typeof f === "function") {
